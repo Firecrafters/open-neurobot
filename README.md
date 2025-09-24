@@ -53,6 +53,4 @@ Feel free to fork this project and submit pull requests for any improvements!
 
 ## Invite
 
-<span>
-https://discord.com/api/oauth2/authorize?client_id=<code>ClientID</code>&permissions=377957312512&scope=bot%20applications.commands
-</span>
+<span>https:</span>//discord.com/api/oauth2/authorize?client_id=<code>ClientID</code>&permissions=377957312512&scope=bot%20applications.commands
