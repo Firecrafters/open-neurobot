@@ -28,3 +28,8 @@ Thumbs.db
 *.js
 *.d.ts
 *.map
+
+# Ignore other package manager lockfiles
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
