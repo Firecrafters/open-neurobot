@@ -24,9 +24,6 @@ pids
 ehthumbs.db
 Thumbs.db
 
-# Cookie counts
-data/cookies/
-
 # Compiled files
 *.js
 *.d.ts
