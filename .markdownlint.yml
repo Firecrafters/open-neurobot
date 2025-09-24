@@ -1,0 +1,3 @@
+MD034: false # No bare links
+MD033: false # No inline HTML
+MD013: false # Max line length

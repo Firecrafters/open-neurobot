@@ -1,0 +1,23 @@
+{
+  "name": "discord-hi-bot",
+  "version": "1.0.0",
+  "description": "A simple Discord bot that responds 'Hi' to the /hi command",
+  "main": "bot.js",
+  "scripts": {
+    "start": "tsc && node bot.js",
+    "dev": "nodemon bot.js"
+  },
+  "keywords": ["discord", "bot", "slash-commands"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "bun": "^1.2.22",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.9.2"
+  },
+  "type": "module"
+}
