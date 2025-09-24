@@ -1,4 +1,4 @@
-import { Client, GatewayIntentBits, REST, Routes, SlashCommandBuilder } from "discord.js";
+import { Client, GatewayIntentBits, REST, Routes } from "discord.js";
 import commands from "./commandDefs.js";
 import dotenv from "dotenv";
 import * as data from "./data.js";
@@ -39,13 +39,13 @@ client.on("interactionCreate", async (interaction) => {
         if (config.LOG_SENT_COMMANDS)
             console.log(`/cookie sent by ${interaction.user.displayName} (${interaction.user.id})`);
 
-        const fileData: string = await data.getData(`cookies/${interaction.user.id}`);
+        const fileData: string = await data.getData(interaction.user.id);
         if (config.LOG_COOKIES)
             console.log(`Original Cookies: ${fileData}`);
         
         let currentCount = 0;
         
-        // Parse current count, default to 0 if file not found or invalid
+        // Parse current count, default to 0 if the file is not found or invalid
         if (fileData !== "NotFound") {
             const parsed = parseInt(fileData);
             currentCount = isNaN(parsed) ? 0 : parsed;
@@ -57,12 +57,13 @@ client.on("interactionCreate", async (interaction) => {
         if (config.LOG_COOKIES)
             console.log(`New Cookies: ${newCount}`);
         
-        // Save new count
-        await data.setData(`cookies/${interaction.user.id}`, newCount.toString());
+        // Save the new count
+        await data.setData(interaction.user.id, newCount.toString());
         
         await interaction.reply(`:cookie: <:neurOMEGALUL:${process.env.OMEGALUL_ID}> Om nom nom\nYou've given me **${newCount}** cookies!`);
     }
 });
 
 // Login to Discord with client token
-client.login(process.env.DISCORD_TOKEN);
+// Callback only exits to stop WebStorm from giving a warning
+client.login(process.env.DISCORD_TOKEN).then(r => r);
