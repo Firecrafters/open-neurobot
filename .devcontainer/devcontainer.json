@@ -1,0 +1,50 @@
+{
+    "name": "NeuroBot",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "..",
+        "args": {
+            "GITHUB_REPOSITORY": "${localEnv:GITHUB_REPOSITORY}",
+            "APP_DIR": "/workspace"
+        }
+    },
+    "runArgs": [
+        "--init",
+        "--add-host=host.docker.internal:host-gateway"
+    ],
+    "remoteUser": "bun",
+    "workspaceFolder": "/workspace",
+    "postCreateCommand": "git init",
+    "updateContentCommand": "bun install",
+    "postAttachCommand": "bun audit || true",
+    "shutdownAction": "stopContainer",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint",
+                "adpyke.codesnap",
+                "EditorConfig.EditorConfig",
+                "DavidAnson.vscode-markdownlint",
+                "mutantdino.resourcemonitor"
+            ],
+            "settings": {
+                // Codesnap
+                "codesnap.realLineNumbers": true,
+                "codesnap.showWindowControls": false,
+                "codesnap.showWindowTitle": true,
+
+                // File Nesting
+                "explorer.fileNesting.enabled": true,
+                "explorer.fileNesting.patterns": {
+                    "*.ts": "${capture}.js",
+                    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts, ${capture}.d.ts.map",
+                    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock"
+                },
+                "explorer.fileNesting.expand": false,
+
+                "resmon.show.battery": false
+            }
+        }
+    }
+}
