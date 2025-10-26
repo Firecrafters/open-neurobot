@@ -1,6 +1,10 @@
 {
     "recommendations": [
         "esbenp.prettier-vscode",
-        "DavidAnson.vscode-markdownlint"
+        "dbaeumer.vscode-eslint",
+        "adpyke.codesnap",
+        "EditorConfig.EditorConfig",
+        "DavidAnson.vscode-markdownlint",
+        "mutantdino.resourcemonitor"
     ]
 }
