@@ -13,7 +13,5 @@
     },
     "explorer.fileNesting.expand": false,
 
-    "files.autoSave": "off",
-
     "resmon.show.battery": false
 }
