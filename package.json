@@ -5,7 +5,7 @@
   "main": "bot.js",
   "scripts": {
     "start": "tsc && node bot.js",
-    "dev": "nodemon bot.js"
+    "dev": "conc 'tsc --watch' 'nodemon bot.js'"
   },
   "keywords": ["discord", "bot", "slash-commands"],
   "author": "",
@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "bun": "^1.2.22",
+    "concurrently": "^9.2.1",
     "nodemon": "^3.0.1",
     "typescript": "^5.9.2"
   },

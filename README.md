@@ -4,7 +4,7 @@ An open-source clone of NeuroBot from the Neuro-sama discord server.
 
 ## Setup
 
-Copy .env.example to a .env, and replace the placeholders with the correct info. N
+Copy .env.example to a .env, and replace the placeholders with the correct info.
 
 ### Getting `OMEGALUL_ID`
 
@@ -41,7 +41,7 @@ Current features:
 - It may take a few minutes for slash commands to appear after first registration
 - Try restarting the bot
 
-### Bot goes offline immediately
+### Other
 
 - Check console for error messages
 - Verify all environment variables are set correctly

@@ -27,7 +27,7 @@ export async function setData(key: string, value: string): Promise<void> {
     try {
         const database = await initializeDB();
 
-        // Convert value to integer
+        // Convert value to integer, if it can't be parsed, make it 0
         const count: number = parseInt(value) || 0;
 
         await database.run(`

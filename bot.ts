@@ -42,25 +42,29 @@ client.on("interactionCreate", async (interaction) => {
         const fileData: string = await data.getData(interaction.user.id);
         if (config.LOG_COOKIES)
             console.log(`Original Cookies: ${fileData}`);
-        
+
         let currentCount = 0;
-        
+
         // Parse current count, default to 0 if the file is not found or invalid
         if (fileData !== "NotFound") {
             const parsed = parseInt(fileData);
             currentCount = isNaN(parsed) ? 0 : parsed;
         }
-        
+
         // Increment count
         const newCount = currentCount + 1;
 
         if (config.LOG_COOKIES)
             console.log(`New Cookies: ${newCount}`);
-        
+
         // Save the new count
         await data.setData(interaction.user.id, newCount.toString());
-        
+
         await interaction.reply(`:cookie: <:neurOMEGALUL:${process.env.OMEGALUL_ID}> Om nom nom\nYou've given me **${newCount}** cookies!`);
+    }
+
+    if (commandName === "nothing") {
+        await interaction.reply("Nothing ever happens, all-in");
     }
 });
 
