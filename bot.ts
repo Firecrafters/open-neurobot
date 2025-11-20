@@ -70,6 +70,10 @@ client.on("interactionCreate", async (interaction) => {
     if (commandName === "bwaa") {
         await interaction.reply("<:neuroBwaa:1440914676358840461>");
     }
+
+    if (commandName === "felloff") {
+        await interaction.reply("<a:RIPBOZO:1440915966841065573>");
+    }
 });
 
 // Login to Discord with client token

@@ -6,16 +6,15 @@ const commands = [
         .setDescription("Gives the bot a cookie.")
         .toJSON(),
 
-        new SlashCommandBuilder()
+    new SlashCommandBuilder()
         .setName("bwaa")
         .setDescription("Bwaa")
         .toJSON(),
 
-    // TODO: Add functionality for these commands
-    // new SlashCommandBuilder()
-    //     .setName("felloff")
-    //     .setDescription("RIPBOZO")
-    //     .toJSON(),
+    new SlashCommandBuilder()
+        .setName("felloff")
+        .setDescription("RIPBOZO")
+        .toJSON(),
 
     new SlashCommandBuilder()
         .setName("nothing")
