@@ -60,7 +60,7 @@ client.on("interactionCreate", async (interaction) => {
         // Save the new count
         await data.setData(interaction.user.id, newCount.toString());
 
-        await interaction.reply(`:cookie: <:neurOMEGALUL:${process.env.OMEGALUL_ID}> Om nom nom\nYou've given me **${newCount}** cookies!`);
+        await interaction.reply(`:cookie: <:neurOMEGALUL:${process.env.OMEGALUL_ID}> Om nom nom\nYou've given me **${newCount}** cookie${newCount === 1 ? "" : "s"}!`);
     }
 
     if (commandName === "nothing") {
