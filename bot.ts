@@ -66,6 +66,10 @@ client.on("interactionCreate", async (interaction) => {
     if (commandName === "nothing") {
         await interaction.reply("Nothing ever happens, all-in");
     }
+
+    if (commandName === "bwaa") {
+        await interaction.reply("<:neuroBwaa:1440914676358840461>");
+    }
 });
 
 // Login to Discord with client token
