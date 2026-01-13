@@ -45,7 +45,7 @@ Copy `.env.example` to a `.env`, and replace the placeholders with the correct i
 
 ## Contributing
 
-Feel free to fork this project and submit pull requests for any improvements!
+Feel free to contribute if you find anything you can help with.
 
 ## Inviting the bot
 
