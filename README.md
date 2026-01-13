@@ -1,25 +1,21 @@
 # Open-NeuroBot
 
-An open-source clone of NeuroBot from the Neuro-sama discord server.
+An open-source clone of NeuroBot from the Neuro-sama discord server. This is still in early development, and there are many features that it will lack, since, due to not being a mod on the server, I don't know about, or have access to, a large portion of what NeuroBot can do. So likely the only things being added will be things that regular users can do with the original.
 
 ## Setup
 
-Copy .env.example to a .env, and replace the placeholders with the correct info.
-
-### Getting `OMEGALUL_ID`
-
-1. Upload an emoji to the bot in the Discord Developer Portal. [Click here for the emoji image](./images/1097297318119743638.webp).
-2. Set the name of the emoji to "neurOMEGALUL"
-3. Set `OMEGALUL_ID` in `.env` to the `EMOJI ID`
+Copy `.env.example` to a `.env`, and replace the placeholders with the correct info.
 
 ## Usage
 
-Current features:
+### Commands
 
-### Cookies
-
-1. Type `/cookie` in any channel where the bot has permissions
-2. The bot will respond with the total number of times you have given it a cookie
+| Command    | Description                                                                     |
+| ---------- | ------------------------------------------------------------------------------- |
+| `/cookie`  | The bot will be given a cookie and tell you how many cookies you have given it. |
+| `/felloff` | The bot will respond with a RIPBOZO emote.                                      |
+| `/nothing` | The bot will respond with "Nothing ever happens, all-in"                        |
+| `/bwaa`    | The bot will respond with a neuroBwaa emote                                     |
 
 ## Troubleshooting
 
@@ -33,7 +29,7 @@ Current features:
 ### "Invalid token" error
 
 - Double-check your `DISCORD_TOKEN` in the `.env` file
-- Make sure there are no extra spaces or quotes around the token
+- Make sure there are no extra spaces around the token
 
 ### Commands not showing up
 
@@ -51,6 +47,6 @@ Current features:
 
 Feel free to fork this project and submit pull requests for any improvements!
 
-## Invite
+## Inviting the bot
 
-<span>https:</span>//discord.com/api/oauth2/authorize?client_id=<code>ClientID</code>&permissions=377957312512&scope=bot%20applications.commands
+https://<span>discord</span>.com/api/oauth2/authorize?client_id=<code>ClientID</code>&permissions=377957312512&scope=bot%20applications.commands

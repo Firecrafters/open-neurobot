@@ -3,6 +3,7 @@ import commands from "./commandDefs.js";
 import dotenv from "dotenv";
 import * as data from "./data.js";
 import * as config from "./config.js";
+import EMOTES from "./emotes.js";
 dotenv.config();
 
 // Create a new client instance
@@ -60,7 +61,7 @@ client.on("interactionCreate", async (interaction) => {
         // Save the new count
         await data.setData(interaction.user.id, newCount.toString());
 
-        await interaction.reply(`:cookie: <:neurOMEGALUL:${process.env.OMEGALUL_ID}> Om nom nom\nYou've given me **${newCount}** cookie${newCount === 1 ? "" : "s"}!`);
+        await interaction.reply(`:cookie: ${EMOTES.NEUROMEGALUL} Om nom nom\nYou've given me **${newCount}** cookie${newCount === 1 ? "" : "s"}!`);
     }
 
     if (commandName === "nothing") {
@@ -68,14 +69,13 @@ client.on("interactionCreate", async (interaction) => {
     }
 
     if (commandName === "bwaa") {
-        await interaction.reply("<:neuroBwaa:1440914676358840461>");
+        await interaction.reply(EMOTES.NEUROBWAA);
     }
 
     if (commandName === "felloff") {
-        await interaction.reply("<a:RIPBOZO:1440915966841065573>");
+        await interaction.reply(EMOTES.RIPBOZO);
     }
 });
 
 // Login to Discord with client token
-// Callback only exits to stop WebStorm from giving a warning
-client.login(process.env.DISCORD_TOKEN).then(r => r);
+client.login(process.env.DISCORD_TOKEN);
